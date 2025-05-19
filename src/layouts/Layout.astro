@@ -1,0 +1,71 @@
+---
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Experience the ancient wisdom of Siddha Yoga Tradition - a spiritual lineage under Sri Prabhuji and Sri Guruji." } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content={description} />
+		
+		<!-- Font imports -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+		
+		<title>{title} | Siddha Yoga Tradition</title>
+	</head>
+	<body class="min-h-screen flex flex-col bg-sacred-ivory">
+		<Navbar />
+		<main class="flex-grow">
+			<slot />
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style is:global>
+	html {
+		scroll-behavior: smooth;
+	}
+	
+	body {
+		font-family: 'Poppins', sans-serif;
+		color: #333333;
+		overflow-x: hidden;
+	}
+
+	h1, h2 {
+		font-family: 'Playfair Display', serif;
+		line-height: 1.2;
+	}
+
+	h3, h4 {
+		font-family: 'Cormorant Garamond', serif;
+		line-height: 1.2;
+	}
+
+	.script-text {
+		font-family: 'Great Vibes', cursive;
+	}
+	
+	.fade-in {
+		animation: fadeIn 1.2s ease-in-out;
+	}
+	
+	@keyframes fadeIn {
+		0% { opacity: 0; }
+		100% { opacity: 1; }
+	}
+</style>

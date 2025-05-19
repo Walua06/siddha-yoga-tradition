@@ -1,0 +1,96 @@
+---
+import SectionTitle from "./SectionTitle.astro";
+import Button from "./Button.astro";
+
+const upcomingEvents = [
+  {
+    title: "Monthly Online Satsang",
+    date: "June 15, 2025",
+    time: "7:00 PM IST",
+    location: "Online via Zoom",
+    description: "Join us for the monthly online gathering with Sri Guruji for spiritual discourse and Q&A session.",
+    link: "/events/monthly-satsang"
+  },
+  {
+    title: "Himalayan Retreat",
+    date: "July 10-17, 2025",
+    time: "One Week",
+    location: "Rishikesh Ashram",
+    description: "A week-long immersive spiritual retreat in the foothills of the Himalayas, guided by Sri Prabhuji.",
+    link: "/events/himalayan-retreat"
+  },
+  {
+    title: "Bhajan Sandhya",
+    date: "June 27, 2025",
+    time: "6:30 PM IST",
+    location: "Online & Bengaluru Ashram",
+    description: "An evening of devotional music and chanting to elevate your spiritual consciousness.",
+    link: "/events/bhajan-sandhya"
+  }
+];
+---
+
+<section class="py-20 bg-himalayan-sky bg-opacity-10">
+  <div class="container mx-auto px-4">
+    <SectionTitle
+      title="Upcoming Events"
+      subtitle="Join us for transformative gatherings, retreats, and satsangs both online and in our ashrams."
+      scriptText="Spiritual Calendar"
+    />
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      {upcomingEvents.map(event => (
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-4">
+              <div>
+                <h3 class="text-xl font-cormorant font-semibold text-deep-charcoal">{event.title}</h3>
+              </div>
+              <div class="bg-lotus-pink bg-opacity-10 text-lotus-coral px-3 py-1 rounded-full text-xs font-medium">
+                {event.date}
+              </div>
+            </div>
+            
+            <div class="space-y-3 mb-6">
+              <div class="flex items-center text-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-lotus-coral" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                {event.time}
+              </div>
+              
+              <div class="flex items-center text-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-lotus-coral" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                {event.location}
+              </div>
+            </div>
+            
+            <p class="text-sm text-deep-charcoal mb-6">
+              {event.description}
+            </p>
+            
+            <Button
+              text="Register Now"
+              href={event.link}
+              variant="primary"
+              size="sm"
+            />
+          </div>
+        </div>
+      ))}
+    </div>
+    
+    <div class="mt-12 text-center">
+      <Button
+        text="View All Events"
+        href="/events"
+        variant="outline"
+        size="md"
+        class="border-lotus-coral"
+      />
+    </div>
+  </div>
+</section>

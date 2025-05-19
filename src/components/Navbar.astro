@@ -1,0 +1,91 @@
+---
+const navLinks = [
+  { text: "Home", url: "/" },
+  { text: "About", url: "/about" },
+  { text: "Our Gurus", url: "/gurus" },
+  { text: "Virtual Darshan", url: "/darshan" },
+  { text: "Literature", url: "/literature" },
+  { text: "Practices", url: "/practices" },
+  { text: "Events", url: "/events" },
+  { text: "Contact", url: "/contact" },
+];
+---
+
+<header class="fixed w-full transition-all duration-300 z-50" id="header">
+  <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+    <a href="/" class="flex items-center">
+      <span class="text-xl font-playfair font-semibold text-deep-charcoal">Siddha Yoga Tradition</span>
+    </a>
+    
+    <!-- Mobile menu button -->
+    <button id="mobile-menu-button" class="lg:hidden text-deep-charcoal focus:outline-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+    
+    <!-- Desktop navigation -->
+    <nav class="hidden lg:flex space-x-8">
+      {navLinks.map(link => (
+        <a 
+          href={link.url} 
+          class="font-poppins text-sm text-deep-charcoal hover:text-lotus-coral transition-colors duration-300"
+        >
+          {link.text}
+        </a>
+      ))}
+      <a 
+        href="/darshan" 
+        class="font-poppins text-sm font-medium px-5 py-2 rounded-full bg-gradient-to-r from-lotus-pink to-lotus-coral text-white hover:shadow-soft-glow transition duration-300"
+      >
+        Virtual Darshan
+      </a>
+    </nav>
+  </div>
+  
+  <!-- Mobile navigation -->
+  <div id="mobile-menu" class="hidden lg:hidden bg-sacred-ivory shadow-md">
+    <div class="container mx-auto px-4 py-3">
+      <nav class="flex flex-col space-y-4">
+        {navLinks.map(link => (
+          <a 
+            href={link.url} 
+            class="font-poppins text-sm text-deep-charcoal hover:text-lotus-coral py-2 border-b border-misty-ash"
+          >
+            {link.text}
+          </a>
+        ))}
+        <a 
+          href="/darshan" 
+          class="font-poppins text-sm font-medium px-5 py-2 text-center rounded-full bg-gradient-to-r from-lotus-pink to-lotus-coral text-white hover:shadow-soft-glow transition duration-300"
+        >
+          Virtual Darshan
+        </a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<script>
+  // Handle mobile menu toggle
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const header = document.getElementById('header');
+
+  if (mobileMenuButton && mobileMenu) {
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  }
+
+  // Handle header background on scroll
+  if (header) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) {
+        header.classList.add('bg-sacred-ivory', 'shadow-md');
+      } else {
+        header.classList.remove('bg-sacred-ivory', 'shadow-md');
+      }
+    });
+  }
+</script>

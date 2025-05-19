@@ -1,0 +1,38 @@
+---
+export interface Props {
+  title: string;
+  subtitle?: string;
+  alignment?: 'left' | 'center' | 'right';
+  scriptText?: string;
+}
+
+const { 
+  title, 
+  subtitle, 
+  alignment = 'center',
+  scriptText 
+} = Astro.props;
+
+const alignmentClasses = {
+  left: 'text-left',
+  center: 'text-center',
+  right: 'text-right'
+};
+---
+
+<div class={`mb-12 ${alignmentClasses[alignment]}`}>
+  {scriptText && (
+    <div class="script-text text-lotus-coral text-2xl mb-2">{scriptText}</div>
+  )}
+  <h2 class="text-3xl md:text-4xl font-playfair font-semibold text-deep-charcoal mb-4">
+    {title}
+  </h2>
+  {subtitle && (
+    <p class="text-base md:text-lg max-w-3xl mx-auto text-deep-charcoal opacity-80">
+      {subtitle}
+    </p>
+  )}
+  <div class="w-24 h-1 bg-gradient-to-r from-lotus-pink to-lotus-coral rounded-full mt-4 mb-4 
+    {alignment === 'center' ? 'mx-auto' : alignment === 'right' ? 'ml-auto' : ''}">
+  </div>
+</div>

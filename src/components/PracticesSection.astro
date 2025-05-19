@@ -1,0 +1,84 @@
+---
+import SectionTitle from "./SectionTitle.astro";
+import Button from "./Button.astro";
+
+const practiceImageUrl = "https://images.pexels.com/photos/5701756/pexels-photo-5701756.jpeg";
+---
+
+<section class="py-20 bg-lotus-pink bg-opacity-5">
+  <div class="container mx-auto px-4">
+    <SectionTitle
+      title="Do It Along Practices"
+      subtitle="Join our guided spiritual practices to deepen your connection and inner peace."
+      scriptText="Daily Sadhana"
+    />
+    
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
+      <div class="order-2 lg:order-1">
+        <h3 class="text-2xl font-cormorant font-semibold mb-4 text-deep-charcoal">
+          Guided Spiritual Practices
+        </h3>
+        <p class="text-base mb-6 text-deep-charcoal">
+          Our "Do It Along" practices offer step-by-step guidance for spiritual aspirants at all levels. 
+          These practices include meditation, breathwork, mantra chanting, and more, designed to help you 
+          establish a consistent and meaningful spiritual routine.
+        </p>
+        
+        <div class="space-y-4 mb-8">
+          <div class="flex items-start">
+            <div class="w-10 h-10 rounded-full bg-himalayan-sky flex items-center justify-center mr-4 shrink-0 text-lotus-coral">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+              </svg>
+            </div>
+            <div>
+              <h4 class="text-lg font-cormorant font-semibold text-deep-charcoal">Morning Meditation</h4>
+              <p class="text-sm text-deep-charcoal">Start your day with clarity and intention through our guided morning meditation.</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start">
+            <div class="w-10 h-10 rounded-full bg-himalayan-sky flex items-center justify-center mr-4 shrink-0 text-lotus-coral">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z" />
+              </svg>
+            </div>
+            <div>
+              <h4 class="text-lg font-cormorant font-semibold text-deep-charcoal">Pranayama Sessions</h4>
+              <p class="text-sm text-deep-charcoal">Learn ancient breathing techniques to balance your energy and calm your mind.</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start">
+            <div class="w-10 h-10 rounded-full bg-himalayan-sky flex items-center justify-center mr-4 shrink-0 text-lotus-coral">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+              </svg>
+            </div>
+            <div>
+              <h4 class="text-lg font-cormorant font-semibold text-deep-charcoal">Evening Chanting</h4>
+              <p class="text-sm text-deep-charcoal">Close your day with sacred mantras that purify your mind and environment.</p>
+            </div>
+          </div>
+        </div>
+        
+        <Button
+          text="Explore Practices"
+          href="/practices"
+          variant="primary"
+          size="md"
+        />
+      </div>
+      
+      <div class="order-1 lg:order-2">
+        <div class="rounded-lg overflow-hidden shadow-md">
+          <img 
+            src={practiceImageUrl} 
+            alt="Meditation practice" 
+            class="w-full h-auto"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

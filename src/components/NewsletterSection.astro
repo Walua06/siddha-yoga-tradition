@@ -1,0 +1,37 @@
+---
+import Button from "./Button.astro";
+---
+
+<section class="py-16 bg-gradient-to-r from-lotus-pink to-lotus-coral">
+  <div class="container mx-auto px-4">
+    <div class="max-w-3xl mx-auto text-center">
+      <div class="script-text text-sacred-ivory text-3xl mb-2">Join Our Journey</div>
+      <h2 class="text-3xl md:text-4xl font-playfair font-semibold text-white mb-4">
+        Subscribe to Our Newsletter
+      </h2>
+      <p class="text-lg text-white opacity-90 mb-8">
+        Stay connected with our spiritual community and receive monthly insights, event updates,
+        and wisdom teachings from our gurus.
+      </p>
+      
+      <form class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+        <input 
+          type="email" 
+          placeholder="Your email address" 
+          class="flex-grow px-4 py-3 rounded-md border-none focus:outline-none focus:ring-2 focus:ring-deep-charcoal"
+          required
+        />
+        <button 
+          type="submit"
+          class="px-6 py-3 bg-deep-charcoal text-white rounded-md hover:bg-opacity-90 transition duration-300"
+        >
+          Subscribe
+        </button>
+      </form>
+      
+      <p class="text-sm text-white opacity-80 mt-4">
+        We respect your privacy and will never share your information.
+      </p>
+    </div>
+  </div>
+</section>

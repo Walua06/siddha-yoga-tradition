@@ -1,0 +1,73 @@
+---
+import SectionTitle from "./SectionTitle.astro";
+import Button from "./Button.astro";
+
+const guruImage1 = "https://images.pexels.com/photos/8108391/pexels-photo-8108391.jpeg";
+const guruImage2 = "https://images.pexels.com/photos/6646918/pexels-photo-6646918.jpeg";
+---
+
+<section class="py-20 bg-sacred-ivory">
+  <div class="container mx-auto px-4">
+    <SectionTitle
+      title="Our Revered Gurus"
+      subtitle="The enlightened masters who guide our spiritual lineage with wisdom and compassion."
+      scriptText="Divine Guidance"
+    />
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+      <!-- Sri Prabhuji -->
+      <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:translate-y-[-5px]">
+        <div class="h-64 overflow-hidden">
+          <img 
+            src={guruImage1} 
+            alt="Sri Prabhuji" 
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="p-6">
+          <h3 class="text-2xl font-cormorant font-semibold mb-3 text-deep-charcoal">Sri Prabhuji</h3>
+          <p class="text-sm mb-6 text-deep-charcoal">
+            A realized master who has illuminated the path for thousands of seekers worldwide.
+            His teachings blend ancient wisdom with practical guidance for modern life.
+          </p>
+          <div class="text-sm text-lotus-coral italic mb-6">
+            "True spirituality is not an escape from life, but a deeper engagement with it."
+          </div>
+          <Button
+            text="Learn More"
+            href="/gurus/prabhuji"
+            variant="primary"
+            size="sm"
+          />
+        </div>
+      </div>
+      
+      <!-- Sri Guruji -->
+      <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:translate-y-[-5px]">
+        <div class="h-64 overflow-hidden">
+          <img 
+            src={guruImage2} 
+            alt="Sri Guruji" 
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="p-6">
+          <h3 class="text-2xl font-cormorant font-semibold mb-3 text-deep-charcoal">Sri Guruji</h3>
+          <p class="text-sm mb-6 text-deep-charcoal">
+            Continuing the unbroken lineage of sages, Sri Guruji offers profound spiritual insights
+            that awaken the divine connection within each aspirant.
+          </p>
+          <div class="text-sm text-lotus-coral italic mb-6">
+            "The journey to enlightenment begins with the practice of awareness in every moment."
+          </div>
+          <Button
+            text="Learn More"
+            href="/gurus/guruji"
+            variant="primary"
+            size="sm"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
