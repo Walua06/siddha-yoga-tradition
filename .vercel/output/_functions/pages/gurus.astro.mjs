@@ -1,0 +1,86 @@
+/* empty css                                   */
+import { c as createComponent, r as renderComponent, a as renderTemplate, m as maybeRenderHead, b as addAttribute } from '../chunks/astro/server_qGYhCKi_.mjs';
+import 'kleur/colors';
+import { $ as $$Layout, a as $$SectionTitle, b as $$Button } from '../chunks/Button_kad_h6Qf.mjs';
+export { renderers } from '../renderers.mjs';
+
+const $$Gurus = createComponent(($$result, $$props, $$slots) => {
+  const guruImage1 = "https://images.pexels.com/photos/8108391/pexels-photo-8108391.jpeg";
+  const guruImage2 = "https://images.pexels.com/photos/6646918/pexels-photo-6646918.jpeg";
+  const lineageBackground = "https://images.pexels.com/photos/5701756/pexels-photo-5701756.jpeg";
+  const teachings = [
+    {
+      guru: "Sri Prabhuji",
+      quotes: [
+        "True meditation is not an escape from life, but a complete encounter with life.",
+        "When you serve others with love, you are serving the divine that resides in all beings.",
+        "The purpose of spiritual practice is not to change who you are, but to realize who you've always been."
+      ]
+    },
+    {
+      guru: "Sri Guruji",
+      quotes: [
+        "Your breath is the bridge between your conscious mind and your unconscious being.",
+        "Let go of who you think you should be, to embrace who you truly are.",
+        "The highest form of spiritual practice is to remain in awareness in every moment."
+      ]
+    }
+  ];
+  return renderTemplate`${renderComponent($$result, "Layout", $$Layout, { "title": "Our Gurus", "description": "Learn about the revered spiritual masters of Siddha Yoga Tradition - Sri Prabhuji and Sri Guruji." }, { "default": ($$result2) => renderTemplate`  ${maybeRenderHead()}<div class="pt-32 pb-10 bg-sacred-ivory"> <div class="container mx-auto px-4"> ${renderComponent($$result2, "SectionTitle", $$SectionTitle, { "title": "Our Revered Gurus", "subtitle": "The enlightened masters who guide our spiritual lineage with wisdom and compassion.", "scriptText": "Divine Guidance" })} </div> </div>  <section class="py-16 bg-white"> <div class="container mx-auto px-4"> <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"> <div class="order-2 lg:order-1"> <div class="script-text text-lotus-coral text-2xl mb-2">Founder</div> <h2 class="text-3xl font-playfair font-semibold text-deep-charcoal mb-4">
+Sri Prabhuji
+</h2> <div class="w-24 h-1 bg-gradient-to-r from-lotus-pink to-lotus-coral rounded-full mb-6"></div> <p class="text-base mb-4 text-deep-charcoal">
+Sri Prabhuji is a realized master whose spiritual journey began at an early age in the sacred
+            foothills of the Himalayas. After years of intense meditation and tapasya (spiritual austerities),
+            he attained self-realization and has since dedicated his life to guiding sincere seekers on the path.
+</p> <p class="text-base mb-4 text-deep-charcoal">
+His teachings blend the ancient wisdom of Siddha Yoga with practical guidance for modern life.
+            Sri Prabhuji emphasizes the importance of daily sadhana (spiritual practice), selfless service,
+            and inner transformation as the foundation of spiritual growth.
+</p> <p class="text-base mb-6 text-deep-charcoal">
+With profound simplicity and compassion, he has touched thousands of lives globally,
+            establishing ashrams and spiritual centers dedicated to the preservation and transmission
+            of the Siddha Yoga lineage.
+</p> <div class="space-y-3 italic text-lotus-coral text-lg mb-6 border-l-4 border-lotus-pink pl-4"> ${teachings[0].quotes.map((quote) => renderTemplate`<p>"${quote}"</p>`)} </div> ${renderComponent($$result2, "Button", $$Button, { "text": "Virtual Darshan with Sri Prabhuji", "href": "/darshan", "variant": "primary", "size": "md" })} </div> <div class="order-1 lg:order-2"> <div class="rounded-lg overflow-hidden shadow-md"> <img${addAttribute(guruImage1, "src")} alt="Sri Prabhuji" class="w-full h-auto"> </div> </div> </div> </div> </section>  <section class="py-16 bg-himalayan-sky bg-opacity-10"> <div class="container mx-auto px-4"> <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"> <div> <div class="rounded-lg overflow-hidden shadow-md"> <img${addAttribute(guruImage2, "src")} alt="Sri Guruji" class="w-full h-auto"> </div> </div> <div> <div class="script-text text-lotus-coral text-2xl mb-2">Current Master</div> <h2 class="text-3xl font-playfair font-semibold text-deep-charcoal mb-4">
+Sri Guruji
+</h2> <div class="w-24 h-1 bg-gradient-to-r from-lotus-pink to-lotus-coral rounded-full mb-6"></div> <p class="text-base mb-4 text-deep-charcoal">
+Sri Guruji is the current spiritual head of the Siddha Yoga Tradition. As a direct disciple
+            of Sri Prabhuji, he embodies the essence of the lineage while bringing a contemporary approach
+            to ancient practices.
+</p> <p class="text-base mb-4 text-deep-charcoal">
+Known for his profound insights and ability to explain complex spiritual concepts in accessible terms,
+            Sri Guruji has expanded the reach of Siddha Yoga Tradition globally through online teachings,
+            retreats, and innovative programs designed for modern seekers.
+</p> <p class="text-base mb-6 text-deep-charcoal">
+His focus on inner awakening through meditation, self-inquiry, and devotional practices
+            has helped countless individuals experience transformation in their everyday lives,
+            regardless of background or circumstance.
+</p> <div class="space-y-3 italic text-lotus-coral text-lg mb-6 border-l-4 border-lotus-pink pl-4"> ${teachings[1].quotes.map((quote) => renderTemplate`<p>"${quote}"</p>`)} </div> ${renderComponent($$result2, "Button", $$Button, { "text": "Virtual Darshan with Sri Guruji", "href": "/darshan", "variant": "primary", "size": "md" })} </div> </div> </div> </section>  <section class="py-16 relative"> <div class="absolute inset-0 z-0"> <img${addAttribute(lineageBackground, "src")} alt="Spiritual lineage background" class="w-full h-full object-cover opacity-20"> </div> <div class="container mx-auto px-4 relative z-10"> ${renderComponent($$result2, "SectionTitle", $$SectionTitle, { "title": "Our Spiritual Lineage", "subtitle": "The unbroken tradition of wisdom transmission from master to disciple.", "scriptText": "Parampara" })} <div class="max-w-3xl mx-auto"> <div class="bg-white bg-opacity-90 rounded-lg shadow-md p-8"> <p class="text-base mb-4 text-deep-charcoal">
+The Siddha Yoga Tradition represents an ancient lineage of realized masters who have preserved
+            and transmitted the sacred knowledge of self-realization through the ages. This unbroken chain
+            of wisdom, known as "Parampara," ensures the purity and authenticity of the teachings.
+</p> <p class="text-base mb-4 text-deep-charcoal">
+The lineage traces its roots to the Himalayan sages who discovered the subtle science of
+            consciousness through deep meditation and inner exploration. These realized beings developed
+            systematic practices for spiritual awakening that have been refined and adapted through generations
+            while maintaining their essential potency.
+</p> <p class="text-base mb-4 text-deep-charcoal">
+In our tradition, knowledge is not merely intellectual but experiential, transmitted through the
+            direct connection between guru and disciple. This living relationship forms the cornerstone of
+            authentic spiritual growth, allowing the disciple to receive not only teachings but also the
+            transformative energy (shakti) that accelerates their spiritual evolution.
+</p> <div class="mt-8 text-center"> ${renderComponent($$result2, "Button", $$Button, { "text": "Learn About Diksha (Spiritual Initiation)", "href": "/diksha", "variant": "outline", "size": "md", "class": "border-lotus-coral" })} </div> </div> </div> </div> </section> ` })}`;
+}, "/home/project/src/pages/gurus.astro", void 0);
+
+const $$file = "/home/project/src/pages/gurus.astro";
+const $$url = "/gurus";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$Gurus,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };
